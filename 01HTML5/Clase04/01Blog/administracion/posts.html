@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/ico/favicon-16x16.png">
+    <link rel="manifest" href="../img/ico/site.webmanifest">
+    <link rel="stylesheet" href="../estilos/principal.css">
+</head>
+<body>
+    <header>
+        <h1 class="colorprincipal">Blog</h1>
+        <h3>Lista de Posts</h3>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Fecha</th>
+                    <th>Autor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mi primer Post</td>
+                    <td>09/09/2020</td>
+                    <td>Andrés</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bienvenidos al curso</td>
+                    <td>10/09/2020</td>
+                    <td>Educacion IT</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Pautas de la cursada</td>
+                    <td>10/09/2020</td>
+                    <td>TELECOM</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Primeros pasos</td>
+                    <td>10/09/2020</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>ID</td>
+                    <td>Titulo</td>
+                    <td>Fecha</td>
+                    <td>Autor</td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr />
+        <table>
+            <thead>
+                <tr>
+                    <th>.</th>
+                    <th>14/09</th>
+                    <th>15/09</th>
+                    <th>16/09</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4" style="width: 50px">Cantidad de visitas por dia de cada pagina los ultimos tres dias</td>
+                    <td colspan="3" style="text-align: center;">Mi primer Post</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>100</td>
+                    <td>95</td>
+                    <td>63</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="3" style="text-align: center;">Bienvenidos al curso</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>99</td>
+                    <td>32</td>
+                    <td>17</td>
+                </tr>
+            </tbody>
+        </table>
+        <iframe src="nuevopost.html" width="100%" height="600px"></iframe>
+    </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+body {
+    background-color: #F7F6EC;
+    margin: 75px 75px 75px 75px;
+}
+
+.colorprincipal {
+    color: #3B50D5;
+}
+
+#comentariofinal {
+    font-size: 10px;
+    color: grey;
+}
+
+#logoInstituto {
+    width: 200px;
+}
