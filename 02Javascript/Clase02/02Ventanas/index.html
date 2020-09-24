@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombre = prompt("Por favor ingrese su nombre");
+        var apellido = prompt("Por favor ingrese el apellido");
+        var edad = prompt("Por favor ingrese la edad");
+        alert("El nombre del usuario es "+nombre);
+        alert("El apellido del usuario es "+apellido);
+        alert("La edad del usuario es "+edad);
+
+        document.write("El nombre del usuario es "+nombre+"<br>");
+        document.write("El apellido del usuario es "+apellido+"<br>");
+        document.write("La edad del usuario es "+edad+"<br>");
+
+        document.write("El nombre del usuario es "+nombre+"<br>El apellido del usuario es "+apellido+"<br>La edad del usuario es"+edad);
+        /**/
+        var sueldo = prompt("Ingrese su sueldo");
+        var bonus = prompt("Ingrese su bonus");
+        
+        
+        //parseInt()
+        //parseFloat()
+        var sueldoNumero=parseFloat(sueldo);
+        var bonusNumero=parseFloat(bonus);
+
+        var total = sueldoNumero + bonusNumero;
+        alert("Su sueldo total es "+total);
+
+        console.log(sueldo);
+        console.log(sueldoNumero);
+    </script>
+</body>
+</html>
