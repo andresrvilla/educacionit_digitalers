@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nombre del alumno:
+    <input type="text" id="txtNombre"> <br />
+    Apellido del alumno:
+    <input type="text" id="txtApellido"><br />
+    Edad del alumno:
+    <input type="number" id="txtEdad"><br />
+    <button id="btnAgregar">Agregar</button><br />
+    <script>
+        var alumnos = [];
+
+        var elementoBoton = document.getElementById("btnAgregar");
+        elementoBoton.onclick=function(){
+            var elementoNombre = document.getElementById("txtNombre");
+            var nombre = elementoNombre.value;
+            var elementoApellido = document.getElementById("txtApellido");
+            var apellido = elementoApellido.value;
+            var elementoEdad = document.getElementById("txtEdad");
+            var edad = parseInt(elementoEdad.value);
+
+            var nuevaPersona = {
+                Nombre: nombre,
+                Apellido: apellido,
+                Edad: edad
+            }
+
+            alumnos.push(nuevaPersona);
+        }
+    </script>
+</body>
+</html>
