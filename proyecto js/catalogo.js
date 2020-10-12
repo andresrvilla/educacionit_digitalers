@@ -106,5 +106,21 @@ var preciod = parseFloat(200000)
         costoTotal -= 200000
     }      
        } 
-       
-    quitarprun.onclick = quitardos   
+    var quitartre=document.getElementById("quitar")
+       function quitartres(){        
+        var fila = "<tr><td>";
+            fila += contadorproductot;
+            fila += "</td><td>";
+            fila += "Celular Samsung";
+            fila += "</td><td>";
+            fila += preciot;
+            fila += "</td><td><button onclick=quitartres() >";
+            fila += "quitar";
+            fila += "</button></td></tr>";
+            cuerpo.innerHTML = fila; 
+        if (0<contadorproductot && 0<preciot) {        
+                contadorproductot --
+                preciot -= 80000
+                costoTotal -= 80000
+            }                 
+       }
