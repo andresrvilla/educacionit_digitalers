@@ -23,7 +23,7 @@
     var botonUno=document.getElementById("botonUno") // variable para el onclik para la tabla precio,producto y cantidad del primer seleccionar(primer producto)
     var contadorproducto = 1
     var precio = parseFloat(50000) 
-    
+    //funcion agregar el producto uno
     function agregarProducto(){        
         var fila = "<tr><td>";
             fila += contadorproducto;
@@ -40,12 +40,11 @@
         precio += 50000
         costoTotal += 50000        
 }
-botonUno.onclick= agregarProducto
 
 var botonDos = document.getElementById("botonDos") // variable para el onclik para la tabla precio,producto y cantidad del segundo seleccionar(segundo producto)
 var contadorproductod = 1
-    var preciod = parseFloat(200000) 
-    
+var preciod = parseFloat(200000) 
+    //funcion agregar el producto dos
         function agregarProductos(){        
         var fila = "<tr><td>";
             fila += contadorproductod;
@@ -53,53 +52,57 @@ var contadorproductod = 1
             fila += "Notebook-9-pro";
             fila += "</td><td>";
             fila += preciod;
-            fila += "</td><td><button id = 'quitar'>";
-            fila += "quitar";
+            fila += "</td><td><button onclick=quitardos() >";
+            fila += "sacar";
             fila += "</button></td></tr>";
             cuerpo.innerHTML = fila;        
         
         contadorproductod ++
         preciod += 200000 
-        costoTotal += 200000  
-          
-}    
-botonDos.onclick = agregarProductos
+        costoTotal += 200000            
+} 
 
     var botonTres = document.getElementById("botonTres")// variable para el onclik para la tabla precio,producto y cantidad del tercer seleccionar(tercer producto)
     var contadorproductot = 1
-        var preciot = parseFloat(80000) 
+    var preciot = parseFloat(80000) 
+    //funcion agregar el producto tres    
+    function agregarProductoss(){        
+        var fila = "<tr><td>";
+            fila += contadorproductot;
+            fila += "</td><td>";
+            fila += "Celular Samsung";
+            fila += "</td><td>";
+            fila += preciot;
+            fila += "</td><td><button onclick=quitartres() >";
+            fila += "quitar";
+            fila += "</button></td></tr>";
+            cuerpo.innerHTML = fila;            
         
-            function agregarProductoss(){        
-            var fila = "<tr><td>";
-                fila += contadorproductot;
-                fila += "</td><td>";
-                fila += "Celular Samsung";
-                fila += "</td><td>";
-                fila += preciot;
-                fila += "</td><td><button id = 'quitar'>";
-                fila += "quitar";
-                fila += "</button></td></tr>";
-                cuerpo.innerHTML = fila;            
-            
-            contadorproductot ++
-            preciot += 80000      
-            costoTotal += 80000 
+        contadorproductot ++
+        preciot += 80000      
+        costoTotal += 80000 
     }   
     
-    for (let i = 0; i < botonSeleccionar.length; i++) {
-      botonSeleccionar[i].onclick = cantidadAnuncios  
-    } // llamo a la variable onclick y a la funcion
-
-    botonUno.onclick = agregarProducto
-    botonDos.onclick = agregarProductos
+    botonUno.onclick= cantidadAnuncios,agregarProducto;           
+    botonDos.onclick = agregarProductos;
+    botonTres.onclick = agregarProductoss;
     
     var quitarprun= document.getElementById("quitar")// no se como hacer funcionar para que vaya descontando de a un producto
-    function quitar(){
-       contadorproducto --
-       precio -= 50000
+    function quitardos(){
+        var fila = "<tr><td>";
+        fila += contadorproductod - 1;
+        fila += "</td><td>";
+        fila += "Notebook-9-pro";
+        fila += "</td><td>";
+        fila += preciod - 200000;
+        fila += "</td><td><button onclick=quitardos() >";
+        fila += "sacar";
+        fila += "</button></td></tr>";
+        cuerpo.innerHTML = fila; 
        contadorproductod --
        preciod -= 200000
-       contadorproductot --
-       preciot -= 80000
-       }  
-    quitarprun.onclick = quitar   
+       costoTotal -= 200000
+
+       } 
+       
+    quitarprun.onclick = quitardos   
