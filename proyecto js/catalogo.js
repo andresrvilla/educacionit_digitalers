@@ -88,21 +88,23 @@ var preciod = parseFloat(200000)
     botonTres.onclick = agregarProductoss;
     
     var quitarprun= document.getElementById("quitar")// no se como hacer funcionar para que vaya descontando de a un producto
+   //funcion del producto dos para quitar de a uno pero suma uno y luego resta
     function quitardos(){
         var fila = "<tr><td>";
-        fila += contadorproductod - 1;
+        fila += contadorproductod;
         fila += "</td><td>";
         fila += "Notebook-9-pro";
         fila += "</td><td>";
-        fila += preciod - 200000;
+        fila += preciod;
         fila += "</td><td><button onclick=quitardos() >";
         fila += "sacar";
         fila += "</button></td></tr>";
-        cuerpo.innerHTML = fila; 
-       contadorproductod --
-       preciod -= 200000
-       costoTotal -= 200000
-
+        cuerpo.innerHTML = fila;
+    if (0<contadorproductod && 0<preciod) {        
+        contadorproductod --
+        preciod -= 200000
+        costoTotal -= 200000
+    }      
        } 
        
     quitarprun.onclick = quitardos   
