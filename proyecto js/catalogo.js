@@ -1,7 +1,6 @@
-    var botonSeleccionar = document.getElementsByTagName("button")
-    
-    var contadorAnuncios = 1    
-    var costoTotal = precio + preciod + preciot
+    var botonSeleccionar = document.getElementsByTagName("button")// variable para el onclick para la suma de cantidad de anuncios    
+    var contadorAnuncios = 1 // contador para la cantidad de anuncios  
+    var costoTotal = precio + preciod + preciot // no se ja mi logica era recorrer con un for pero no se como hacerlo
     function cantidadAnuncios(){
         var fila = "<th>";
             fila += "Cantidad de anuncios seleccionados: " + contadorAnuncios;
@@ -20,9 +19,9 @@
         totall.innerHTML = fila;
         costoTotal ++
         
-    }
+    } //funcion para la cuenta de los anuncios
     
-    var botonUno=document.getElementById("botonUno")   
+    var botonUno=document.getElementById("botonUno") // variable para el onclik para la tabla precio,producto y cantidad del primer seleccionar(primer producto)
     var contadorproducto = 1
     var precio = parseFloat(50000) 
     
@@ -42,14 +41,14 @@
         precio += 50000
         
 }
- var quitarprun= document.getElementById("quitar")
+ var quitarprun= document.getElementById("quitar")// no se como hacer funcionar para que vaya descontando de a un producto
  function quitar(){
     contadorproducto --
     precio -= 50000
     }  
     botonUno.onclick= agregarProducto
 
-var botonDos = document.getElementById("botonDos")
+var botonDos = document.getElementById("botonDos") // variable para el onclik para la tabla precio,producto y cantidad del segundo seleccionar(segundo producto)
 var contadorproductod = 1
     var preciod = parseFloat(200000) 
     
@@ -73,7 +72,7 @@ var contadorproductod = 1
   
     
 botonDos.onclick = agregarProductos
-    var botonTres = document.getElementById("botonTres")
+    var botonTres = document.getElementById("botonTres")// variable para el onclik para la tabla precio,producto y cantidad del tercer seleccionar(tercer producto)
     var contadorproductot = 1
         var preciot = parseFloat(80000) 
         
@@ -97,7 +96,7 @@ botonDos.onclick = agregarProductos
     
     for (let i = 0; i < botonSeleccionar.length; i++) {
       botonSeleccionar[i].onclick = cantidadAnuncios  
-    }
+    } // llamo a la variable onclick y a la funcion
 
-    botonUno.onclick = agregarProducto
+    botonUno.onclick = agregarProducto 
     
