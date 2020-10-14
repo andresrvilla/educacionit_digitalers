@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css" />
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Sitio de Compras</h1>
+    <table>
+        <tr>
+            <td>
+                <img src="imgs/black-dslr-camera-on-white-surface-51383.jpg" />
+                <h3>Cámara</h3>
+                Descripci&oacute;n<br>
+                $ 1500<br>
+                <button onclick="seleccionar(1)">Seleccionar</button>
+            </td>
+            <td>
+                <img src="imgs/semi-opened-laptop-computer-turned-on-on-table-2047905.jpg" />
+                <h3>MacBook</h3>
+                Descripci&oacute;n<br>
+                $ 1300<br>
+                <button onclick="seleccionar(2)">Seleccionar</button>
+            </td>
+            <td>
+                <img src="imgs/silver-iphone-x-with-airpods-788946.jpg" />
+                <h3>IPhone X</h3>
+                Descripci&oacute;n<br>
+                $ 1350<br>
+                <button onclick="seleccionar(3)">Seleccionar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                Cantidad Articulos Seleccionados: <span id="cantidadSeleccionado">0</span>
+            </td>
+            <td>
+                Costo total: $ <span id="costoTotal">0</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Cantidad</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody id="bodyArticulosSeleccionados">
+
+        </tbody>
+    </table>
+    <script>
+        var articulos = [
+            {
+                id: 1,
+                articulo: "Cámara",
+                costo: 1500,
+                cantidad: 0
+            },
+            {
+                id: 2,
+                articulo: "MacBook",
+                costo: 1300,
+                cantidad: 0
+            },
+            {
+                id: 3,
+                articulo: "IPhone X",
+                costo: 1350,
+                cantidad: 0
+            }
+        ];
+
+        function seleccionar(idArticulo) {
+            //Busco el articulo en la lista de articulos. Al encontrarlo aumento la cantidad
+            for (var i = 0; i < articulos.length; i++) {
+                if (articulos[i].id == idArticulo) {
+                    articulos[i].cantidad++;
+                }
+            }
+            actualizarTotal();
+            actualizarSeleccionados();
+        }
+
+        function quitar(idArticulo) {
+            //Busco el articulo en la lista de articulos. Al encontrarlo aumento la cantidad
+            for (var i = 0; i < articulos.length; i++) {
+                if (articulos[i].id == idArticulo) {
+                    articulos[i].cantidad--;
+                }
+            }
+            actualizarTotal();
+            actualizarSeleccionados();
+        }
+        function actualizarTotal() {
+            var cantidadElementos = 0;
+            var totalPrecio = 0;
+
+            for (var i = 0; i < articulos.length; i++) {
+                cantidadElementos += articulos[i].cantidad;
+                totalPrecio += articulos[i].cantidad * articulos[i].costo;
+            }
+
+            var cantidadSpan = document.getElementById("cantidadSeleccionado");
+            cantidadSpan.innerText = cantidadElementos;
+            var totalSpan = document.getElementById("costoTotal");
+            totalSpan.innerText = totalPrecio;
+        }
+
+        function actualizarSeleccionados() {
+            var elementos = document.getElementById("bodyArticulosSeleccionados");
+            var resultado = "";
+            for (var i = 0; i < articulos.length; i++) {
+                //creo las filas de cada una de la tabla de detalle si hay al menos un elemento comprado
+                if (articulos[i].cantidad > 0) {
+                    resultado += "<tr>";
+                    resultado += "<td>" + articulos[i].cantidad + "</td>";
+                    resultado += "<td>" + articulos[i].articulo + "</td>";
+                    resultado += "<td>" + (articulos[i].cantidad * articulos[i].costo) + "</td>";
+                    resultado += "<td><button onclick='quitar(" + articulos[i].id + ")'>Quitar</button></td>";
+                    resultado += "</tr>";
+                }
+            }
+            elementos.innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
