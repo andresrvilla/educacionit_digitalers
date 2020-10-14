@@ -25,8 +25,6 @@ function quitar(){
                 
             var cantidad = document.getElementById("sumar");
             cantidad.innerHTML = fila;
-
-            var precio = document.getElementsByClassName("precio");
                 
             var fila = "<th>";
                 fila += "costo total: " + total;
@@ -140,11 +138,11 @@ btnDos.onclick= sumarDos
 var contadorTres =  0
 var precioTres = 0
 var btnTres = document.getElementById("btntres")
-function quitarDos(){
-    if (btnDos && 0<contadorDos && 0<precioDos) {
-            contadorDos --
-            precioDos -= 180000
-            total -= 180000 
+function quitarTres(){
+    if (btnTres && 0<contadorTres && 0<precioTres) {
+            contadorTres --
+            precioTres -= 150000
+            total -= 150000 
             cantAnuncios --                      
             var fila = "<td>"
             fila += contadorTres
@@ -174,8 +172,8 @@ function quitarDos(){
 function sumarTres(){
     if (btnTres) {
         contadorTres ++
-        precioTres += 180000
-        total += 180000 
+        precioTres += 150000
+        total += 150000 
         cantAnuncios ++
         var fila = "<td>"
             fila += contadorTres
@@ -203,6 +201,3 @@ function sumarTres(){
     }
 
 btnTres.onclick= sumarTres
-
-
-
