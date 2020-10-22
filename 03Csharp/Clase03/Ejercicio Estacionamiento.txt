@@ -1,0 +1,9 @@
+Se debe crear un Sistema para un Estacionamiento con las siguientes características:
+
+1- La cantidad de cocheras debe poder cambiarse facilmente
+2- El precio del uso es fijo, es decir, no se factura por hora ni por tipo de vehiculo. Ese valor tambien debe poder cambiarse facilmente.
+3- Cada cochera puede albergar un unico vehiculo, no importa el tipo de vehiculo que sea. El vehiculo se registra por patente.
+4- Se debe avisar si la cochera esta llena antes de que se intente ingresar el vehiculo
+5- Se debe ingresar automaticamente el vehiculo a la primera cochera disponible. Es decir, si el estacionamiento esta vacio, debe ingresarse en la cochera 1. Si el estacionamiento tiene 3 vehiculos, el nuevo que se ingresa se debe ubicar en la cochera 4
+6- Como se puede sacar un vehiculo de una cochera intermedia, puede haber huecos vacios. Cuando ingrese un nuevo vehiculo va a ocupar el primer hueco vacio
+7- Se debe ir guardando el ingreso total de los pagos de cada salida de vehiculo

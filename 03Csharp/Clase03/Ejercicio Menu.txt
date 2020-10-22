@@ -1,0 +1,56 @@
+1- Primer paso
+
+Local de venta de computación
+
+1- Laptop
+	1- Acer
+	2- HP
+	3- Dell
+2- Teclado
+	1- Gamer
+	2- Inalambrico
+3- Cables
+	1- Impresora
+	2- Micro USB
+	3- USB C
+4- Memorias
+	1- 512
+	2- 1G
+	3- 4G
+5- Salir
+
+---------------------------------
+
+2- Segundo paso (Tarea)
+
+Local de venta de computación
+
+1- Laptop
+	0- Menu Principal
+	1- Acer
+	2- HP
+	3- Dell
+2- Teclado
+	0- Menu Principal
+	1- Gamer
+	2- Inalambrico
+3- Cables
+	0- Menu Principal
+	1- Impresora
+	2- Micro USB
+	3- USB C
+4- Memorias
+	0- Menu Principal
+	1- 512
+	2- 1G
+	3- 4G
+5- Salir
+
+---------------------------------
+
+3- Tercer paso (Tarea)
+
+Se genere una lista de elementos seleccionados
+Luego cuando se presiona "salir" del menu principal, se muestra todo lo seleccionado
+
+4- Completar con validaciones, etc, etc....
