@@ -1,0 +1,43 @@
+Cochera
+	Atributos
+	*********
+	Numero
+	Vehiculo
+
+
+	Metodos
+	*******
+	bool EstaDisponible()
+	Vehiculo Egresar(string patente)
+	bool Ingresar(Vehiculo vehiculo)
+	
+Vehiculo
+	Atributos
+	*********
+	Patente
+
+	Metodos
+	*******
+	Vehiculo(string patente)
+
+Estacionamiento
+	Atributos
+	*********
+	decimal PrecioDeUso
+	Cochera[] Cocheras
+	decimal TotalFacturado
+
+	Metodos
+	*******
+	bool EstaLleno()
+	Cochera BuscarCocheraDisponible()
+	decimal Cobrar(string patente)
+	int RegistrarAuto(string patente)
+	int RegistrarAuto(string patente, int numeroDeCochera)
+	int ObtenerCantidadCocherasEnUso()
+	int ObtenerCantidadLibre()
+
+	Estacionamiento(decimal elPrecio, int cantidadDeCocheras){
+		TotalFacturado = 0;
+	}
+	Estacionamiento(decimal elPrecio, int cantidadDeCocheras, int cajaInicial)
